@@ -1,26 +1,21 @@
+// importanção do React
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+// importação dos componentes
+import FunctionalComponent from './components/FunctionComponents';
+import ClassComponents from './components/ClassComponents';
+
+// componente no formato de função
+const App: React.FC = () => {
+  return(
+    <div>
+      <h1>Listando os nossos componentes</h1>
+      <FunctionalComponent/>
+      <ClassComponents/>
+      {/* importando adicionando ao código os componentes */}
     </div>
   );
 }
 
 export default App;
+// exportação
