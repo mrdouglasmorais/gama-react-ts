@@ -13,7 +13,7 @@ const Home: React.FC = () => {
       <FunctionalComponent/>
       <ClassComponents/>
       {/* importando adicionando ao código os componentes */}
-      {/* <PartOne /> */}
+      <PartOne />
 
       <ButtonProps name="Botão 1" />
       <ButtonProps name="Botão 2" />
