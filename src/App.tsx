@@ -7,6 +7,8 @@ import ClassComponents from './components/ClassComponents';
 
 import PartOne from './components/Hooks/PartOne'
 
+import ButtonProps from './components/Props/Component'
+
 // componente no formato de função
 const App: React.FC = () => {
   return(
@@ -16,6 +18,11 @@ const App: React.FC = () => {
       <ClassComponents/>
       {/* importando adicionando ao código os componentes */}
       <PartOne />
+
+      {/*  */}
+      <ButtonProps name="Botão 1" />
+      <ButtonProps name="Botão 2" />
+
     </div>
   );
 }
