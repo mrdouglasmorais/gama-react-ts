@@ -1,14 +1,43 @@
-import React from 'react';
+import React, {useState, FormEvent, useCallback} from 'react';
+import api from '../../services/api'
 
-// import { Container } from './styles';
+interface IDataContent{
+  name: string;
+  email: string;
+  phone: string;
+}
 
 const Contato: React.FC = () => {
+  const [data, setData] = useState<IDataContent>({} as IDataContent);
+
+  const postData = useCallback((e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    api.post('', data).then(
+      res => alert(res.data.message)
+    )
+  }, [data])
+
   return (
-    <form>
-      <input type="text" placeholder="Informe seu nome"/>
-      <input type="text" placeholder="Informe seu email"/>
-      <input type="text" placeholder="Informe seu telefone"/>
-      <input type="submit" value="Enviar" />
+    <form onSubmit={postData}>
+      <input 
+        type="text" 
+        placeholder="Informe seu nome"
+        onChange={e => setData({...data, name: e.target.value})}
+      />
+      <input 
+        type="text" 
+        placeholder="Informe seu email"
+        onChange={e => setData({...data, email: e.target.value})}
+      />
+      <input 
+        type="text" 
+        placeholder="Informe seu telefone"
+        onChange={e => setData({...data, phone: e.target.value})}
+      />
+      <input 
+        type="submit" 
+        value="Enviar"
+      />
     </form>
   );
 }
