@@ -9,7 +9,7 @@ const PartOne: React.FC = () => {
   // iniciando o nosso componente com um valor em nosso estado
   return(
     <div>
-      <h3>Olá, {name}</h3>
+      <h3>Olá, {name}.</h3>
         <input type="text" placeholder="Informe seu nome" 
         value={name} onChange={e => setName( e.target.value )}
         />
