@@ -5,6 +5,8 @@ import React from 'react';
 import FunctionalComponent from './components/FunctionComponents';
 import ClassComponents from './components/ClassComponents';
 
+import PartOne from './components/Hooks/PartOne'
+
 // componente no formato de função
 const App: React.FC = () => {
   return(
@@ -13,6 +15,7 @@ const App: React.FC = () => {
       <FunctionalComponent/>
       <ClassComponents/>
       {/* importando adicionando ao código os componentes */}
+      <PartOne />
     </div>
   );
 }
